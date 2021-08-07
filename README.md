@@ -41,9 +41,13 @@ Listing 1: Example configuration file
 4 dc06 1233
 
 1 4 
+
 0 2 3 
+
 1 3 
+
 1 2 4 
+
 0 3
 
 4 Output Format
@@ -53,7 +57,9 @@ The output file for process j should be named <config_name>-j.dat and should con
 Listing 2: Example output file for node 4
 
 4 
+
 0 3 
+
 2 4
 
 2
