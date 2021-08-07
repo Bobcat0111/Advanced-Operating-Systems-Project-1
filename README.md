@@ -26,21 +26,21 @@ valid line, any characters after a # character should be ignored.
 You are responsible for ensuring that your program runs correctly when given a valid configu-
 ration file. Make no additional assumptions concerning the configuration format. If you have any questions about the configuration format, please ask the TA.
 
-# global parameter 5
+\# global parameter 5
 0 dc02 1234
 1 dc03 1233
 2 dc04 1233
 3 dc05 1232
 4 dc06 1233
 
-# nodeID hostName listenPort
+\# nodeID hostName listenPort
 Listing 1: Example configuration file
 2
 
 14 02 3 13 12 4 03
-# space delimited list of neighbors for # space delimited list of neighbors for # ...
-# ...
-# ...
+\# space delimited list of neighbors for # space delimited list of neighbors for # ...
+\# ...
+\# ...
 node 0 node 1 node 2 node 3 node 4
 
 4 Output Format
