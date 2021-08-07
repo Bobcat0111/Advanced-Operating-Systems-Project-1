@@ -40,19 +40,29 @@ ration file. Make no additional assumptions concerning the configuration format.
 
 
 \# nodeID hostName listenPort
+
 Listing 1: Example configuration file
+
 2
 
 14 02 3 13 12 4 03
+
 \# space delimited list of neighbors for # space delimited list of neighbors for # ...
+
 \# ...
+
 \# ...
+
 node 0 node 1 node 2 node 3 node 4
 
 4 Output Format
 If the configuration file is named <config_name>.dat and is configured to use n nodes, then your program should output n output files, named in according to the following format: <config_name>-<node_id>.out, where node_id ∈ {0, ..., n − 1}.
 The output file for process j should be named <config_name>-j.dat and should contain the following: its k-hop neighborhood for k = 0, 1, . . . , n − 1 followed by its eccentricity (all on separate lines). An example file is described below.
+
 Listing 2: Example output file for node 4
+
 4 03 24
+
 2
+
 In the above example, 3-hop and 4-hop neighborhoods of node 4 are empty.
