@@ -24,9 +24,11 @@ Your program should run using a configuration file in the following format:
 The configuration file will be a plain-text formatted file no more than 100kB in size. Only lines which begin with an unsigned integer are considered to be valid. Lines which are not valid should be ignored. The configuration file will contain 2n + 1 valid lines. The first valid line of the configuration file contains one token that denotes the number of nodes in the system. After the first valid line, the next n lines consist of three tokens. The first token is the node ID. The second token is the host-name of the machine on which the node runs. The third token is the port on which the node listens for incoming connections. After the first n + 1 valid lines, the next n lines consist of a space delimited list of at most n − 1 tokens. The kth valid line after the first line is a space delimited list of node IDs which are the neighbor of node k. Your parser should be written so as to be robust concerning leading and trailing white space or extra lines at the beginning or end of file, as well as interleaved with valid lines. The # character will denote a comment. On any
 valid line, any characters after a # character should be ignored.
 You are responsible for ensuring that your program runs correctly when given a valid configu-
-ration file. Make no additional assumptions concerning the configuration format. If you have any questions about the configuration format, please ask the TA.
+ration file. Make no additional assumptions concerning the configuration format.
 
-\# global parameter 5
+Listing 1: Example configuration file
+\# global parameter 
+5
 
 0 dc02 1234
 
@@ -38,22 +40,11 @@ ration file. Make no additional assumptions concerning the configuration format.
 
 4 dc06 1233
 
-
-\# nodeID hostName listenPort
-
-Listing 1: Example configuration file
-
-2
-
-14 02 3 13 12 4 03
-
-\# space delimited list of neighbors for # space delimited list of neighbors for # ...
-
-\# ...
-
-\# ...
-
-node 0 node 1 node 2 node 3 node 4
+1 4 
+0 2 3 
+1 3 
+1 2 4 
+0 3
 
 4 Output Format
 If the configuration file is named <config_name>.dat and is configured to use n nodes, then your program should output n output files, named in according to the following format: <config_name>-<node_id>.out, where node_id ∈ {0, ..., n − 1}.
@@ -61,7 +52,9 @@ The output file for process j should be named <config_name>-j.dat and should con
 
 Listing 2: Example output file for node 4
 
-4 03 24
+4 
+0 3 
+2 4
 
 2
 
