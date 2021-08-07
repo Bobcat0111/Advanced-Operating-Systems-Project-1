@@ -27,11 +27,17 @@ You are responsible for ensuring that your program runs correctly when given a v
 ration file. Make no additional assumptions concerning the configuration format. If you have any questions about the configuration format, please ask the TA.
 
 \# global parameter 5
+
 0 dc02 1234
+
 1 dc03 1233
+
 2 dc04 1233
+
 3 dc05 1232
+
 4 dc06 1233
+
 
 \# nodeID hostName listenPort
 Listing 1: Example configuration file
